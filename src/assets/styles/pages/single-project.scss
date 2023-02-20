@@ -1,0 +1,329 @@
+.single-project {
+    &-wrap {
+
+    }
+
+    .animation-for-slider {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &-intro {
+        height: 100vh;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 50px 80px;
+        position: relative;
+
+        @include tablet {
+            padding: 50px 10px;
+        }
+
+        @include mobile {
+            padding: 60px 12px;
+        }
+
+        
+
+    }
+    &-intro-wrap {
+        width: 100%;
+        position: sticky;
+        z-index: 5;
+        background-color: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        
+    }
+
+    &-intro-nav {
+        display: flex;
+    }
+
+    &-intro-nav--prev {
+        background: transparent;
+        svg {
+            transform: rotate(0deg);
+        }
+    }
+
+    &-intro-nav--next {
+        background: transparent;
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    &-intro-text-details {
+        margin-bottom: 12px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__descr {
+        display: block;
+        color: #D5DEE8;
+        margin-bottom: 20px;
+    }
+
+    &__details-title {
+        color: $wc;
+    }
+
+    &__details-descr {
+        color: $textGrey;
+    }
+
+    &__title {
+        color: $wc;
+        margin-bottom: 10px;
+
+        @include mobile {
+            margin-bottom: 12px;
+        }
+
+
+    }
+    &-item__descr {
+        display: block;
+        color: #D5DEE8;
+        margin-bottom: 20px;
+
+        @include mobile {
+            margin-bottom: 12px;
+            width: 70%;
+        }
+
+    }
+    &-slider {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        pointer-events: none;
+
+        &-slide {
+            img {
+                position: relative;
+                z-index: -1;
+                width: 100%;
+                object-fit: cover;
+                height: 100vh;
+                width: 100%;
+                object-fit: cover;
+            }
+            
+        }
+
+        
+    }
+
+
+    &-intro-link {
+        
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: #B4C4D5;
+        z-index: 10;
+        pointer-events: all;
+        width: 20%;
+
+        @include mobile {
+            width: 100%;
+        }
+
+    }
+
+    &-intro-btn {
+        margin-right: 20px;
+        
+
+    }
+    &-list {
+        display: flex;
+        flex-direction: column;
+        background: $mc2;
+
+        @include mobile {
+            padding-top: 45px;
+
+        }
+
+    }
+    &-item {
+        display: flex;
+        background: $mc2;
+        max-height: 800px;
+
+        @include tablet {
+            flex-direction: column;
+            max-height: fit-content;
+        }
+
+
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+
+            @include tablet {
+                flex-direction: column;
+            }
+        }
+
+
+    }
+    &-item-intro {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 80px;
+
+        @include tablet {
+            width: 100%;
+            padding: 73px 10px;
+        }
+
+        @include mobile {
+            padding: 40px 12px;
+        }
+
+    }
+    &-item__title {
+        color: $bc;
+        margin-bottom: 20px;
+    }
+    &-item__descr {
+        color: $textCardGrey;
+
+    }
+    &-item-img-wrap {
+        width: 50%;
+
+        @include tablet {
+            width: 100%;
+        }
+
+        @include mobile {
+            height: 412px;
+        }
+
+    }
+
+    &-item-img {
+        object-fit: cover;
+        height: 100%;
+    }
+
+    &-item-list {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+    }
+
+    &-item-list__card {
+        width: 50%;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 24px;
+
+        @include mobile {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        &:nth-last-child(-n+2) {
+            margin-bottom: 0;
+
+            @include mobile {
+                margin-bottom: 12px;
+            }
+        }
+
+        &:last-child {
+            @include mobile {
+                margin-bottom: 0;
+            }
+        }
+
+
+        svg {
+            height: 24px;
+            width: 21px;
+        }
+
+    }
+
+    &-item-list__card-text {
+        display: flex;
+        flex-direction: column;
+        margin-left: 12px;
+    }
+
+    &-item-list__card-title {
+        color: $bc;
+
+    }
+
+    &-item-list__card-descr {
+        color: $textCardGrey;
+    }
+
+    &-btn-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 252px;
+        background-image: url('../images/singleProject/bg-next.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
+    &-btn {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+    }
+
+    &-btn__text {
+        color: $wc;
+        margin-right: 20px;
+
+    }
+
+    &-btn--small {
+        background: $wc;
+
+        svg {
+            fill: $mc1!important;
+            stroke: $mc1;
+            transform: rotate(180deg);
+        }
+    }
+
+
+}

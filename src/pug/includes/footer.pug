@@ -1,0 +1,24 @@
+footer.footer
+  .footer-wrap
+    .footer-menu-wrap 
+        .footer-menu
+            a(href="index.html").footer-menu-link.text-title HOME
+            a(href="about.html").footer-menu-link.text-title ABOUT
+            a(href="projects.html").footer-menu-link.text-title PROJECTS
+            a(href="news.html").footer-menu-link.text-title NEWS
+            a(href="contacts.html").footer-menu-link.text-title CONTACTS
+    .footer-form-wrap
+        .footer-form
+            h2.footer-form__title.text-title Do you have any questions?
+            p.footer-form__descr.text-descr If you have any questions or need advice, our managers will be happy to help you!
+            p.footer-form__hint.text-descr Enter your phone number
+                form.footer-form__form(id="call-form")
+                    .footer-form__field.form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+                        .input-message(data-input-message)
+                        input.footer-form__input(type="tel" name="phone" placeholder="Phone")
+                    .footer-form__btn-wrap.btn-container
+                        .btn-mask Send message
+                        button.footer-form__btn.btn.btn.js-call-submit(type="submit" data-btn-submit-footer) Send message
+                            span.footer-form__btn-text(data-btn-submit-text)
+        button.footer-up.btn-small
+            +svg('arrow')

@@ -1,0 +1,220 @@
+.footer {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 50;
+  display: none;
+  &-leaf {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 200px;
+    opacity: 0.3;
+    z-index: 3;
+    height: 100%;
+    @include mobile {
+      max-width: 250px;
+    }
+  }
+
+  &-wrap {
+    display: flex;
+    background: $mc2;
+
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+
+  }
+  &-menu-wrap {
+    padding: 150px 80px 115px 80px;
+    width: 32%;
+
+    @include tablet {
+      padding: 50px 10px;
+      width: 100%;
+    }
+
+    @include mobile {
+      padding: 50px 12px 100px 12px;
+     
+    }
+  }
+  &-menu {
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      text-align: center;
+    }
+
+  }
+  &-menu-link {
+    margin-bottom: 12px;
+    color: $mc1;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+  &-form-wrap {
+    padding: 150px 80px 115px 80px;
+    width: 68%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../images/footer-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include tablet {
+      padding: 50px 10px;
+      width: 100%;
+    }
+
+    @include mobile {
+      padding: 60px 12px;
+    }
+  }
+
+  &-form {
+    width: 70%;
+    z-index: 3;
+
+    @include tablet {
+      width: 100%;
+    }
+  }
+  &-form__title {
+    width: 70%;
+    color: $mc2;
+    margin-bottom: 20px;
+
+  }
+  &-form__descr {
+    width: 70%;
+    color: $textLightGrey;
+    margin-bottom: 40px;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+
+  }
+  &-form__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+  }
+
+  &-form__hint {
+    color: $textLightGrey;
+    margin-bottom: 8px;
+  }
+
+  &-form__field {
+    margin-top: 0!important;
+    height: 60px!important;
+    width: 75%!important;
+  }
+
+  &-form__input {
+    border: none;
+    outline: none;
+    background: $wc;
+    padding: 0;
+    font-family: $default-font;
+    padding: 10px 40px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 300;
+    color: $mc1;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+    text-transform: none;
+    margin-top: 0!important;
+    height: 60px;
+
+    @include tabletLarge {
+      height: 50px;
+    }
+  }
+  
+  &-form__btn-wrap {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    width: 40%;
+  }
+
+  &-form__btn {
+    position: relative;
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-form__btn-text {
+    position: absolute;
+    left: 70px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 120%;
+    text-align: right;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: $bc;
+
+  }
+  &-up {
+    position: absolute;
+    top: 150px;
+    right: 80px;
+    z-index: 3;
+
+    @include tablet {
+      top: 375px;
+      right: 10px;
+    }
+
+    @include mobile {
+        top: 60px;
+        right: 12px;
+    }
+    svg {
+      transform: rotate(90deg);
+    }
+
+  }
+
+}
+
+// .noise::before{
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100%;
+//   content: "";
+//   /* you can control opacity of noise  */
+//   opacity: 0.05;  
+//   z-index: 1;
+//   pointer-events: none;
+//   background: url('../images/noise.gif') ;
+// }

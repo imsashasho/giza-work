@@ -1,0 +1,8 @@
+ul.breadcrumbs
+  li.breadcrumbs-item
+    a(href="index.html").breadcrumbs-item__link.breadcrumbs-item__link-home Головна
+  if breadcrumbsSubitem
+    each v in breadcrumbsSubitem
+      li.breadcrumbs-item
+        a(href="#").breadcrumbs-item__link= v.label
+  li.breadcrumbs-item__current--color.breadcrumbs-item= title_page

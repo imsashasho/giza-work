@@ -1,0 +1,306 @@
+
+form {
+  width: 100%;
+}
+.form-label {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 140%;
+  color: #cfa46e;
+  @include to(1440px) {
+    font-size: 16px;
+  }
+  @include to(992px) {
+    font-size: 20px;
+  }
+  @include to(576px) {
+    font-size: 12px;
+  }
+}
+
+.form-field:not(#t) {
+  position: relative;
+  margin-top: 37px;
+  background: none;
+  padding-bottom: 15px;
+  transition: all 0.3s;
+  @include tabletLarge {
+    margin-top: 32px;
+  }
+}
+
+[data-animation='focus'] .input-message {
+  position: absolute;
+  top: 50%;
+  left: var(--input-padding);
+  z-index: 3;
+  padding: 0 7px;
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  transform: translate(0%, -50%);
+  user-select: none;
+  pointer-events: none;
+  background-color: #8e8e8e;
+  transition: all 0.16s cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+/*  */
+.form-field-input {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 37px;
+  @include tabletLarge {
+    height: 28px;
+  }
+}
+.form-field__input {
+  width: 100%;
+  font-size: 18px;
+  line-height: 120%;
+  background: none;
+  border: none;
+  color: $bc;
+  @include to(1440px) {
+    font-size: 16px;
+  }
+  @include to(992px) {
+    font-size: 24px;
+    line-height: 140%;
+  }
+  @include to(576px) {
+    font-size: 14px;
+    line-height: 100%;
+  }
+  &::placeholder {
+    color: $bc;
+  }
+  &:focus + .form-field-message {
+    opacity: 1;
+  }
+}
+
+.mask-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65px;
+  height: 100%;
+  z-index: 10;
+  background-color: red;
+  opacity: 0;
+  @include to(1440px) {
+    width: 45px;
+  }
+  @include to(576px) {
+    width: 35px;
+  }
+}
+
+[data-animation='focus'] .form-field__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+  font-size: max(vh(16), 16px);
+  color: #000;
+  text-indent: var(--input-padding);
+  background-color: transparent;
+  border: none;
+  @include to(1440px) {
+    font-size: 14px;
+  }
+}
+[data-animation='none'] .form-field__input {
+  padding: 0;
+  width: 100%;
+  border: none;
+  font-size: max(vh(16), 16px);
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
+    font-size: 20px;
+  }
+  @include tablet {
+    font-size: 15px;
+  }
+  @include mobile {
+    font-size: 14px;
+  }
+}
+
+[data-animation='none'] .input-message {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  display: flex;
+  width: 100%;
+  min-height: 12px;
+  font-size: max(vh(14), 14px);
+  line-height: 100%;
+  transform: translate(0%, 100%);
+  color: $mc2;
+  @include to(1440px) {
+    font-size: 12px;
+  }
+  @include to(576px) {
+    font-size: 10px;
+  }
+}
+
+[data-field-input][data-status='field--inactive']:not(#r) {
+  .input-message {
+    color: transparent;
+    pointer-events: none;
+  }
+}
+
+[data-field-input][data-status='field--active']:not(#r) {
+  border-color: $mc;
+  .input-message {
+    color: $mc;
+  }
+}
+
+[data-field-input][data-status='field--error']:not(#r) {
+  border-color: #ea4041;
+  .input-message {
+    color: #ea4041;
+  }
+}
+
+[data-field-input][data-status='field--success']:not(#r) {
+  border-color: #96c480;
+  .input-message {
+    color: #96c480;
+  }
+}
+
+.selected:not(#f) .input-message {
+  top: 0;
+  font-size: 10px;
+}
+
+/*
+  * input end
+  */
+/**********************************/
+
+.requaired-block {
+  &-ico {
+    width: 25px;
+    height: 25px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.requaired-block {
+  &__ico {
+    width: 25px;
+    height: 25px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+    font-size: vw(16);
+    line-height: 170%;
+    margin: 0px vw(18);
+    white-space: nowrap;
+
+    color: #bbbec2;
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
+      font-size: vw(16);
+      line-height: 1.4em;
+    }
+    @include to(1440px) {
+      font-size: 12px;
+      margin: 0px 15px;
+    }
+  }
+}
+
+.form-textarea {
+  position: relative;
+  margin: 82px 0 0 0;
+  @include to(1440px) {
+    margin: 40px 0 0 0;
+  }
+  @include to(992px) {
+    margin: 50px 0 0 0;
+  }
+  @include to(576px) {
+    margin: 30px 0 0 0;
+  }
+  textarea {
+    padding: 0;
+    height: 115px;
+    width: 100%;
+    display: flex;
+    background: none;
+    font-size: 28px;
+    line-height: 100%;
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
+      font-size: vw(28);
+    }
+    @include to(1440px) {
+      height: 73px;
+      font-size: 20px;
+      line-height: 120%;
+    }
+    @include to(992px) {
+      height: 134px;
+      font-size: 24px;
+      line-height: 140%;
+    }
+    @include to(576px) {
+      height: 74px;
+      font-size: 14px;
+      line-height: 100%;
+    }
+    &::placeholder {
+      color: #ffffff;
+    }
+    &:focus + .form-field-message {
+      opacity: 1;
+    }
+  }
+}
+
+.form-field-message {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  font-size: 12px;
+  line-height: 120%;
+  color: #828282;
+  transform: translateY(calc(-100% - 10px));
+  //margin: 10px 0 0 0;
+  @media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1440px) {
+    font-size: vw(16);
+  }
+  @include to(1440px) {
+    //margin: 10px 0 0 0;
+    font-size: 12px;
+  }
+  @include to(576px) {
+    font-size: 14px;
+  }
+}
+
+.requaired-block-ico--position {
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+}

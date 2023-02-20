@@ -1,0 +1,43 @@
+
+extends ../layout/main
+
+block variable
+  -
+    var title_page = 'Contacts'
+    var id_page = 'id-contacts'
+    var class_page = 'page-contacts'
+    var breadcrumbsSubitem = [
+      {
+        label: 'contactsPage',
+        link: pagesLink[0].contactsPage
+      }
+    ]
+
+block meta
+  title= 'Контакти'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/homepage.bundle.js')
+  //- script.map-script(defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBc_rcO6jcFuCN8AJ9EZLlXENtUDSAcuiw&ver=1655409542')
+  
+  
+
+block header
+  include ../includes/header.pug
+  include ../includes/menu.pug
+block content
+  include ../includes/contacts/main.pug
+  
+  
+block modal
+  include ../includes/thank-you-popup.pug
+  include ../includes/contact-popup.pug
+
+block footer
+  include ../includes/footer.pug

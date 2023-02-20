@@ -1,0 +1,26 @@
+.contact-popup.overlay
+    .popup
+        .contact-popup__text-wrap
+            .contact-popup__text 
+                h1.contact-popup__title.text-title Request a call
+                p.contact-popup__descr.text-descr-uppercase If you have any questions or need advice, our managers will be happy to help you!
+            +svg('logo')
+        .contact-popup-form 
+            form(data-contact-popup)#popup-form
+                p.footer-form__hint.text-descr Name:
+                .contact-popup-form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+                    input(type='text' name="name" placeholder="Phil").contact-popup-form__input
+                    .contact-popup-input-message.text-descr(data-input-message)
+                p.footer-form__hint.text-descr Phone:
+                .contact-popup-form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+                    input(type='text' name="phone").contact-popup-form__input
+                    .contact-popup-input-message.text-descr(data-input-message)
+                p.footer-form__hint.text-descr Email:
+                .contact-popup-form-field.disabled.form-field-input(data-field-input data-field-email data-status="field--inactive")
+                    input(type='text' name="email" placeholder="youremail@gmail.com").contact-popup-form__input
+                    .contact-popup-input-message.text-descr(data-input-message)
+                .btn-container.btn-container-border
+                    .btn-mask Send message
+                    button(type="submit" data-btn-submit).btn
+                        span(data-btn-submit-text).link__text.usn Send message
+            .close-popup.btn-small.close-form

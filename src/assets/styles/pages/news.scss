@@ -1,0 +1,229 @@
+.news {
+    background: $mc1;
+    height: fit-content;
+
+    &-wrap {
+        padding: 150px 70px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            padding: 100px 10px;
+            flex-wrap: wrap;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            padding: 50px 12px;
+            position: relative;
+        }
+    }
+    &-intro {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include mobile {
+            width: 100%;
+            order: 3;
+            position: relative;
+        }
+
+    }
+    &-intro__title {
+        color: $mc2;
+        margin-bottom: 20px;
+
+        @include tablet {
+            display: none;
+        }
+
+    }
+
+    &-intro__title-mob {
+        display: none;
+        @include tablet {
+            display: inline-block;
+            width: 100%;
+        }
+
+        @include mobile {
+            order: 1;
+        }
+
+    }
+    &-intro-swiper-wrap {
+        width: 70%;
+
+        @include tablet {
+            width: 90%;
+        }
+
+        @include mobile {
+             width: 100%;
+        }
+
+    }
+    &-intro-swiper {
+
+    }
+    &-intro-swiper-wrapper {
+
+    }
+    &-intro-slide {
+        width: 70%;
+        opacity: 0!important;
+
+        &.swiper-slide-active {
+            opacity: 1!important;
+        }
+
+    }
+    &-intro-slide__title {
+        opacity: 0;
+        color: $mc2;
+        margin-bottom: 12px;
+
+    }
+    &-intro-slide__descr {
+        color: $textGrey;
+        margin-bottom: 20px;
+
+    }
+    &-intro-slide__btn {
+
+    }
+    &-nav {
+        display: flex;
+
+        @include mobile {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 100;
+            pointer-events: all;
+        }
+
+    }
+
+    &-slides-nav__index {
+        white-space: nowrap;
+        color: $mc1;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+        @include mobile {
+            display: none;
+        }
+    }
+    
+    
+    
+    &-slides-nav__index-current {
+        position: relative;
+        overflow: hidden;
+        padding-right: 32px;
+        margin-right: 12px;
+        color: $mc1;
+    
+        &::after {
+            content: "—";
+            display: block;
+            position: absolute;
+            width: 20px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+    
+        }
+    }
+    
+    &-slides-nav__index-current span {
+        display: inline-block;
+    }
+    &-nav-swiper {
+        display: flex;
+        align-items: center;
+
+    }
+    &-gallery {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @include mobile {
+            width: 100%;
+            order: 2;
+            margin-bottom: 20px;
+        }
+
+    }
+    &-gallery-swiper-wrap {
+
+    }
+    &-gallery-swiper {
+        width: 100%;
+        overflow: hidden;
+
+    }
+    &-gallery-swiper-wrapper {
+
+    }
+    &-gallery-slide {
+
+        .news-gallery-slide-img {
+            transform: scale(0.85);
+            transition: all ease-in-out 0.6s;
+        }
+        &.swiper-slide-active {
+            > .news-gallery-slide-img {
+                transform: scale(1);
+                transition: all ease-in-out 0.6s;
+            }
+        }
+
+    }
+    &-gallery-slide-img {
+
+        img {
+            height: 527px;
+            object-fit: cover;
+
+            @include tablet {
+                height: 387px;
+            }
+
+            @include mobile {
+                height: 180px;
+            }
+        }
+
+    }
+
+    &-gallery__pagination {
+        
+        width: 100%;
+        height: 2px;
+        background-color: rgba(166, 162, 153, 0.2);
+        margin-top: 50px;
+        position: relative;
+
+        @include mobile {
+            display: none;
+        }
+
+        .swiper-pagination-progressbar-fill {
+
+            background: $mc2  !important;
+
+        }
+        
+    }
+
+}

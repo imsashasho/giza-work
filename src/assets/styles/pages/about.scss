@@ -1,0 +1,123 @@
+.about {
+    overflow: hidden;
+    &-wrap {
+        background: $mc1;
+
+        @include tablet {
+            flex-direction: column-reverse;
+            height: 100%;
+        }
+
+    }
+    &-intro-wrap {
+        width: calc(50% - 5px);
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 122px;
+        padding-right: 65px;
+
+        @include tabletLarge {
+            padding-left: 93px;
+            padding-right: 60px;
+        }
+
+        @include tablet {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 10px;
+        }
+
+        @include mobile {
+            padding: 40px 0px;
+        }
+
+    }
+
+    &-intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &-intro-text {
+        width: calc(50% - 75px);
+
+        @include tabletLarge {
+            width: calc(50% - 35px);
+        }
+
+        @include mobile {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &-intro-img {
+        width: calc(50% - 75px);
+
+        @include tabletLarge {
+            width: calc(50% - 35px);
+        }
+
+        @include mobile {
+            display: none;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-intro__title {
+        margin-bottom: 20px;
+        color: $mc2;
+
+        @include tablet {
+            margin-bottom: 12px;
+        }
+
+    }
+
+    &-intro__descr {
+        margin-bottom: 40px;
+        color: $textGrey;
+
+        @include tablet {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &-btn {
+        @include tablet {
+            margin: 0 auto;
+        }
+    }
+
+    &-img-wrap {
+		width: calc(50% - 5px);
+		height: 100%;
+
+        @include tablet {
+            width: 100%;
+            height: 550px;
+        }
+
+        @include mobile {
+            height: 180px;
+        }
+
+	}
+	&-img {
+		height: 100%;
+		object-fit: cover;
+
+	}
+}

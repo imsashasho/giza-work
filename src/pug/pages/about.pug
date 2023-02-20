@@ -1,0 +1,46 @@
+
+extends ../layout/main
+
+block variable
+  -
+    var title_page = 'About'
+    var id_page = 'id-about'
+    var class_page = 'page-about'
+    var breadcrumbsSubitem = [
+      {
+        label: 'aboutPage',
+        link: pagesLink[0].aboutPage
+      }
+    ]
+    
+block meta
+  title= 'Про компанію'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  //- script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/about.bundle.js')
+  //- script.map-script(defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBc_rcO6jcFuCN8AJ9EZLlXENtUDSAcuiw&ver=1655409542')
+  
+  
+
+block header
+  include ../includes/header.pug
+  include ../includes/menu.pug
+block content
+  include ../includes/about/main.pug
+  
+
+block modal
+  include ../includes/thank-you-popup.pug
+  include ../includes/contact-popup.pug
+  
+
+block footer
+  include ../includes/footer.pug
+
+
