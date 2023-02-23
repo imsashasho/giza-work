@@ -1,0 +1,466 @@
+.container {
+  padding: 0 70px;
+  margin: 0 auto;
+
+  @include tablet {
+    padding: 0 10px;
+  }
+}
+
+button {
+  background-color: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-container{
+  position: relative;
+  width: fit-content;
+  height: 60px;
+  overflow: hidden;
+  border: 1px solid $mc1;
+  transition: 0.5s;
+  z-index: 10;
+
+  @include tabletLarge {
+    height: 50px;
+  }
+}
+
+.btn-container-border {
+  border: 1px solid $textGreySpecial;
+}
+
+.btn-container--light {
+
+  border: 1px solid $mc2;
+
+
+}
+ 
+  @-webkit-keyframes ani {
+    from {
+     -webkit-mask-position: 0 0;
+     mask-position: 0 0;
+    }
+   
+    to {
+     -webkit-mask-position: 100% 0;
+     mask-position: 100% 0;
+    }
+  }
+   
+   @keyframes ani {
+    from {
+     -webkit-mask-position: 0 0;
+     mask-position: 0 0;
+    }
+   
+    to {
+     -webkit-mask-position: 100% 0;
+     mask-position: 100% 0;
+    }
+  }
+   
+   @-webkit-keyframes ani2 {
+    from {
+     -webkit-mask-position: 100% 0;
+     mask-position: 100% 0;
+    }
+   
+    to {
+     -webkit-mask-position: 0 0;
+     mask-position: 0 0;
+    }
+  }
+   
+   @keyframes ani2 {
+    from {
+     -webkit-mask-position: 100% 0;
+     mask-position: 100% 0;
+    }
+   
+    to {
+     -webkit-mask-position: 0 0;
+     mask-position: 0 0;
+    }
+  }
+ 
+
+ 
+.btn {
+  border: none;
+  text-decoration: none;
+  outline: none; 
+  display: flex;
+  width: fit-content;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  padding: 21.5px 40px;
+  background: $mc1;
+  font-family: $default-font;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: $mc2;
+  width: 101%;
+  height: 100%; 
+    @include button($mc1, "../images/btn-img.png",
+    2300%,
+    100%,
+    none,
+    $mc2);
+  cursor: pointer;
+  -webkit-animation: ani2 0.7s steps(22) forwards;
+  animation: ani2 0.7s steps(22) forwards;
+
+  &:hover {
+    -webkit-animation: ani 0.7s steps(22) forwards;
+    animation: ani 0.7s steps(22) forwards;
+  }
+
+  @include tabletLarge {
+    font-size: 14px;
+    height: 50px;
+
+  }
+
+}
+
+.btn-dark {
+  background: $mc1;
+}
+
+.btn-light {
+  color: $mc2;
+  background: transparent;
+  border: 1px solid $textGrey;
+  width: 102%;
+
+  @include button($mc2, "../images/btn-img.png",
+    2300%,
+    100%,
+    none,
+    $mc1);
+
+    -webkit-animation: ani2 0.7s steps(22) forwards;
+    animation: ani2 0.7s steps(22) forwards;
+  
+    &:hover {
+      -webkit-animation: ani 0.7s steps(22) forwards;
+      animation: ani 0.7s steps(22) forwards;
+    }
+
+  @include tabletLarge {
+    font-size: 14px;
+  }
+
+
+}
+
+
+.btn-mask {
+  position: absolute;
+  color: $mc2;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  width: fit-content;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  padding: 21.5px 40px;
+  background: $mc2;
+  font-family: $default-font;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: $mc1;
+  width: 100%;
+
+  @include tabletLarge {
+    height: 50px;
+    font-size: 14px;
+  }
+
+}
+
+.btn-mask--light {
+  color: $mc2;
+  background: $mc1;
+
+}
+
+.btn-small {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background: none;
+	border: 0;
+	width: 60px;
+	height: 60px;
+	padding: 0;
+	background: $mc1;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+  @include tabletLarge {
+    width: 52px;
+    height: 52px;
+  }
+
+  @include mobile {
+    width: 42px;
+    height: 42px;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    // fill: $textLightGrey;
+    stroke: $textLightGrey;
+    transform: rotate(270deg);
+  }
+}
+
+.main-card-wrap {
+  padding: 10px;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 1px solid $mc1;
+  background: transparent;
+  -webkit-appearance: none;
+
+  @include tabletLarge {
+    width: 52px;
+    height: 52px;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: $mc1;
+    stroke: $mc1;
+  }
+
+}
+
+.slider-btn-light {
+
+  color: $mc2;
+  background: transparent;
+  border: 1px solid $mc2;
+    svg {
+      fill: $mc2;
+      stroke: $mc2;
+    }
+
+}
+
+
+
+.slider-btn--next {
+  svg {
+    transform: rotate(180deg);
+  }
+}
+
+.slider-btn--prev {
+  margin-right: 8px;
+}
+
+.swiper-button-prev:after {
+  display: none;
+}
+
+
+/* Better focus styles from https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible */
+.btn
+:focus {
+	/* Provide a fallback style for browsers
+	 that don't support :focus-visible */
+	outline: none;
+	background: lightgrey;
+}
+
+a:focus:not(:focus-visible) {
+	/* Remove the focus indicator on mouse-focus for browsers
+	 that do support :focus-visible */
+	background: transparent;
+}
+
+a:focus-visible {
+	/* Draw a very noticeable focus style for
+	 keyboard-focus on browsers that do support
+	 :focus-visible */
+	outline: 2px solid $mc1;
+	background: transparent;
+}
+
+.title-container {
+  overflow: hidden;
+  height: fit-content;
+  width: fit-content;
+
+  @include mobile {
+    margin: 0 auto;
+  }
+}
+
+.text {
+
+  &-header {
+    font-family: $default-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $mc1;
+    transition: all ease-in-out 0.3s;
+  }
+  &-title {
+    font-family: $default-font;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    @include tabletLarge {
+      font-size: 43px;
+    }
+
+    @include mobile {
+      font-size: 36px;
+    }
+  }
+
+  &-medium-uppercase {
+    font-family: $default-font;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+
+  }
+
+  &-descr{
+    font-family: $default-font;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 140%;
+
+  }
+
+  &-descr-uppercase {
+    font-family: $default-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    text-transform: uppercase;
+
+    @include tabletLarge {
+      font-size: 16px;
+    }
+  }
+}
+
+.main-page-header-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.main-page-header-wrap--img {
+  padding: 160px 0 100px;
+
+  @include tabletLarge {
+    padding: 136px 0 40px;
+  }
+
+  @include tablet {
+    padding: 120px 0 40px;
+  }
+
+  @include mobile {
+    padding: 88px 0 30px;           
+  }
+}
+
+.main-page-header-wrap--black {
+  padding: 160px 0 50px;
+
+  @include tabletLarge {
+    padding: 136px 0 40px;
+  }
+
+  @include tablet {
+    padding: 120px 0px 40px;
+  }
+
+  @include mobile {
+    padding: 88px 0 30px;
+  }
+}
+
+.main-page-wrap {
+  padding: 0 70px 150px 70px;
+
+  @include tablet {
+    padding: 0 10px 100px 10px;
+  }
+
+  @include mobile {
+    padding: 0 10px 60px 10px;
+  }
+
+}
+.main-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include tablet {
+
+    .breadcrumbs {
+      margin-bottom: 10px;
+    }
+  }
+
+}
+.main-intro__title {
+  color: $mc2;
+  text-align: center;
+}

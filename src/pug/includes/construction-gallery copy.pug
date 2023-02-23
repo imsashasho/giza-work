@@ -1,0 +1,66 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'construction-gallery'
+    var id_page = 'id-page-construction-gallery'
+    var class_page = 'class-page-construction-gallery'
+    var breadcrumbsSubitem = [
+      {
+        label: 'Construction-gallery',
+        link: pagesLink[0].construction-gallery
+      }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/construction-gallery.js')
+block header
+  include ../includes/header.pug
+block content
+  .gallery-wrap
+    .swiper-container.swiper-gallery
+      .swiper-wrapper.swiper-gallery__wrp
+          .swiper-slide
+            img(src="assets/images/gallery1.png", alt="").swiper-lazy
+            .swiper-lazy-preloader.swiper-lazy-preloader-white
+          .swiper-slide
+            img(src="assets/images/gallery2.png", alt="").swiper-lazy
+            .swiper-lazy-preloader.swiper-lazy-preloader-white
+          .swiper-slide
+            img(src="assets/images/gallery3.png", alt="").swiper-lazy
+            .swiper-lazy-preloader.swiper-lazy-preloader-white
+    .swiper-container.swiper-thumbnails
+      .swiper-wrapper.swiper-thumbnails__wrp
+        .swiper-slide
+          img(src="assets/images/gallery1.png", alt="")
+        .swiper-slide
+          img(src="assets/images/gallery2.png", alt="")
+        .swiper-slide
+          img(src="assets/images/gallery3.png", alt="")
+    .gallery-slider__ctr-wrap
+      a(href="construction.html").gallery-slider__link-back Назад
+      .gallery-slider__date 10.12.2020
+      .gallery-slider__title Грудень
+      .gallery-slider__ctr
+        .gallery-slider__pagination
+        .gallery-slider__arrows
+          button.gallery-slider__arrow.gallery-slider-prev
+            span.icon-font
+              +svg('slider-left-w').icon.icon-arrow-left
+          button.gallery-slider__arrow.gallery-slider-next
+            span.icon-font
+              +svg('slider-right-w').icon.icon-arrow-right
+block modal 
+  include ../includes/form-popup.pug
+
+
+

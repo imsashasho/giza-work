@@ -1,0 +1,56 @@
+header.header
+    .header-inner.container
+        .header-list-wrap 
+            ul.header-list
+                li.header-list-item
+                    a(href='index.html').header-list-link.text-header Home
+                li.header-list-item
+                    a(href='about.html').header-list-link.text-header About
+                li.header-list-item
+                    a(href='projects.html').header-list-link.text-header Projects
+                li.header-list-item
+                    a(href='news.html').header-list-link.text-header News
+                li.header-list-item
+                    a(href='contacts.html').header-list-link.text-header Contacts
+        .header-logo-wrap
+            a(href='index.html').header-logo
+                +svg('logo')
+        .header-group-wrap 
+            .header-lang-wrap
+                ul.lang.header-lang
+                    li(data-animate-links).header-lang__item.header-lang__item--active
+                        a(href="#").text-header UA
+                    li(data-animate-links).header-lang__item
+                        a(href="#").text-header EN
+            .header-call-wrap
+                .header-number-wrap 
+                    a(href="tel:+(90)28947777").header-number__link.text-header +(90) 28 94 7777
+                .header-callback-wrap
+                    .btn-container.header-btn-container
+                        .btn-mask.header-btn-mask Request a call
+                        .btn-mask.header-btn-mask-mobile 
+                            +svg('about-phone')
+                        button.header-callback__btn.btn Request a call
+                        button.header-callback__btn.header-callback__btn-mobile.btn 
+                            +svg('about-phone')
+            //- .header-call-wrap-mobile
+            //-     a(href="tel:+(90)28947777").header-number__link-mobile.btn-small 
+            //-         +svg('about-phone')
+            .header-burger__group
+                a(href="#menu")#header-toggle-menu
+                    p.header-toggle-menu__title Menu
+                    p.header-toggle-menu__title--hidden Close
+                    .header-toggle-menu__icon
+                        span 
+                #menu
+                    ul.header-menu-list 
+                        li.header-menu-item 
+                            a(href='about.html').header-menu-link.text-title About
+                        li.header-menu-item 
+                            a(href="projects.html").header-menu-link.text-title Projects
+                        li.header-menu-item 
+                            a(href="news.html").header-menu-link.text-title News
+                        li.header-menu-item 
+                            a(href="contacts.html").header-menu-link.text-title Contacts
+        
+        

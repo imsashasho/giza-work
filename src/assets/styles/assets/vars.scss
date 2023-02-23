@@ -1,0 +1,96 @@
+$default-font: 'Vela Sans', sans-serif;
+$default-font2: 'montser', sans-serif;
+
+$mc1: #0B1518;
+$mc2: #EBE9E4;
+$textGrey: #A6A299;
+$textLightGrey: #D3D0C9;
+$textGreySpecial: #939598;
+$textCardGrey: #7C8692;
+$border: rgba(166, 162, 153, 0.2);
+$wc: #fff;
+$bc: #0B1518;
+$bc2: #0e0e0e;
+
+
+
+$mc: #1a2941;
+
+$xs: 767px;
+$sm: 1366px;
+$md: 1920px;
+
+@mixin media($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include media($xs) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media($sm) {
+    @content;
+  }
+}
+
+@mixin tabletLarge {
+  @include media($md) {
+    @content;
+  }
+}
+
+
+
+
+
+:root {
+  --in: cubic-bezier(0.13, 0.81, 0.23, 0.96);
+  --header-h: 120px;
+  --sliceFigure: 239px;
+  --sliceFigure-big: 541px;
+
+  @include tabletLarge {
+    --sliceFigure-big: 362px;
+  }
+
+  @include tablet {
+    --header-h: 90px;
+    --logo-w: 148px;
+    --sliceFigure-big: 44px;
+
+  }
+
+  @include mobile {
+    --header-h: 66px;
+    --logo-w: 105 px;
+    --sliceFigure: 100px;
+    --sliceFigure-big: 100px;
+  }
+}
+
+// @media screen and (max-width: 1920) {
+//   :root {
+//     --header-h: 70px;
+//     --logo-w: 120px;
+//     --sliceFigure-big: 362px;
+//   }
+// }
+// @media screen and (max-width: 1366) {
+//   :root {
+//     --header-h: 90px;
+//     --logo-w: 90px;
+//     --sliceFigure-big: 44px;
+//   }
+// }
+// @media screen and (max-width: 768) {
+//   :root {
+//     --header-h: 60px;
+//     --sliceFigure: 100px;
+//     --sliceFigure-big: 100px;
+//   }
+// }

@@ -1,0 +1,154 @@
+.about-page {
+    &-wrap {
+    }
+
+    &-main-intro {
+        background-image: url('../images/aboutPage/bg.jpg');
+
+    }
+    &-list-wrap {
+        padding: 100px 70px 150px 70px;
+        background: $mc1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include tablet {
+            padding: 50px 10px 70px 10px;
+        }
+
+        @include mobile {
+            padding: 40px 10px;
+        }
+
+
+    }
+    &-list-intro {
+        width: 40%;
+        margin-bottom: 50px;
+
+        @include tablet {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+
+    }
+    &-list-descr-upper {
+        color: $mc2;
+        margin-bottom: 20px;
+        text-align: center;
+
+    }
+    &-list-descr{
+        color: $textGrey;
+        margin-bottom: 100px;
+        text-align: center;
+
+        @include tablet {
+            margin-bottom: 40px;
+        }
+
+    }
+    &-list-title{
+        color: $mc2;
+        display: block;
+        text-align: center;
+
+    }
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @include tablet {
+            flex-wrap: wrap;
+        }
+
+
+    }
+    &-card {
+        width: calc(33.3% - 33.3px);
+
+        @include tablet {
+            width: calc(50% - 5px);
+            margin-top: 50px;
+        }
+
+        @include mobile {
+            width: 100%;
+            margin-top: 40px;
+                
+        }
+        
+
+        &:nth-child(-n+2) {
+            @include tablet {
+                margin-top: 0;
+            }
+
+            @include mobile {
+                margin-top: 40px;
+
+            }
+        }
+
+        &:first-child {
+            @include mobile {
+                margin-top: 0;
+                
+            }
+        }
+
+    }
+
+    &-card-img-wrap {
+        margin-bottom: 20px;
+    }
+    &-card-title {
+        color: $mc2;
+        margin-bottom: 8px;
+
+    }
+    &-card-number {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        svg {
+            fill: none;
+            stroke: $textGrey;
+            height: 24px;
+            width: 24px;
+
+        }
+
+    }
+    &-card-number__link {
+        color: $textGrey;
+        margin-left: 12px;
+
+    }
+    &-card-email {
+        display: flex;
+        align-items: center;
+
+        svg {
+            fill: none;
+            stroke: $textGrey;
+            height: 24px;
+            width: 24px;
+
+        }
+
+    }
+    &-card-email__link {
+        color: $textGrey;
+        margin-left: 12px;
+
+    }
+    
+}

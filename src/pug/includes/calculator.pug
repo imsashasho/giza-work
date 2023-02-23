@@ -1,0 +1,38 @@
+.calculator-modal.overlay 
+    .calculator-popup 
+        .calculator-popup-left
+          ul.calculator-list 
+            li.calculator-item 100% оплата USD або гривням
+            li.calculator-item Розстрочка можлива до 24 місяців с першим внеском не менше 50% . Розрахувати розстрочку ви можете в калькуляторі заповнючи поля.
+            li.calculator-item Кредитування 50% перший внесок, решту під 7% до 5 років (ануїтетний платіж)
+            li.calculator-item Кредитування відбувається без посередників, напряму від забудовника. Також, на відміну від різних фінансових установ, на Вас не накладаються штрафи. 
+            li.calculator-item Якщо у Вас не вистачає повної суми до сплати або Вам потрібні кошти, щоб зробити ремонт,  ми можемо розбити залишок без відсотків на 2 роки.
+        .calculator-popup-right 
+          .calculator-input
+            h2.calculator-input__title Калькулятор розстрочки:
+            .calculator-input-cost 
+              label(for="cost") Вартість обранної нерухомості, $
+              input(type="number" placeholder="0" name="costField")#cost.calculator-input-field
+            .calculator-input-min-payment 
+              label(for="minPayment")  Мінімальний перший внесок, $ (50% від вартості)
+              input(type="number" name="minPayment")#minPayment.calculator-output-field
+              input(type="range" name="minPaymentRange")#minPaymentRange.calculator-input-range
+              .calculator-input-range__descr 
+                span.paymentMinLable 60840
+                span.paymentMaxLable 121333
+            .calculator-input-payment-duration 
+              label(for="paymentDuration")  Термін розтермінування (від 1 до 24 місяців)
+              input(type="number" name="paymentDuration" value="1")#paymentDuration.calculator-output-field
+              input(type="range" name="paymentDurationRange" min="1" value="1" max="24")#paymentDurationRange.calculator-input-range
+              .calculator-input-range__descr 
+                span 1
+                span 24           
+          .calculator-result
+            .calculator-result__top
+              h2.calculator-result__title Результат розрахунку:
+              p.calculator-result__descr Обов’язковий щомісячний платіж
+              output(type="number" for="minPayment paymentDuration")#paymentResult.calculator-result__data 0
+            .calculator-result__bottom 
+              p.calculator-result__overal Повна вартість нерухомості після розрахунку не змінюється
+              output(type="number" for="cost")#paymentOveral 0
+    .close-calculator-popup

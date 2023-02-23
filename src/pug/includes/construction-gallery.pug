@@ -1,0 +1,35 @@
+.gallery-wrap.gallery-overlay
+  .swiper-container.swiper-gallery
+    .swiper-wrapper.swiper-gallery__wrp
+        .swiper-slide
+          img(src="assets/images/gallery1.png", alt="").swiper-lazy
+          .swiper-lazy-preloader.swiper-lazy-preloader-white
+        .swiper-slide
+          img(src="assets/images/gallery2.png", alt="").swiper-lazy
+          .swiper-lazy-preloader.swiper-lazy-preloader-white
+        .swiper-slide
+          img(src="assets/images/gallery3.png", alt="").swiper-lazy
+          .swiper-lazy-preloader.swiper-lazy-preloader-white
+  .swiper-container.swiper-thumbnails
+    .swiper-wrapper.swiper-thumbnails__wrp
+      .swiper-slide
+        img(src="assets/images/gallery1.png", alt="")
+      .swiper-slide
+        img(src="assets/images/gallery2.png", alt="")
+      .swiper-slide
+        img(src="assets/images/gallery3.png", alt="")
+  .gallery-slider__ctr-wrap
+    a(href="construction.html").gallery-slider__link-back Назад
+    .gallery-slider__date 10.12.2020
+    .gallery-slider__title Грудень
+    .gallery-slider__ctr
+      .gallery-slider__pagination
+      .gallery-slider__arrows
+        button.gallery-slider__arrow.gallery-slider-prev
+          span.icon-font
+            +svg('slider-left-w').icon.icon-arrow-left
+        button.gallery-slider__arrow.gallery-slider-next
+          span.icon-font
+            +svg('slider-right-w').icon.icon-arrow-right
+
+
